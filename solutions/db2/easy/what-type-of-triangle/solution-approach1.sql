@@ -1,0 +1,25 @@
+-- ──────────────────────────────────────────────────
+-- Link        https://www.hackerrank.com/challenges/what-type-of-triangle/problem?isFullScreen=true
+-- Problem     Type of Triangle
+-- Difficulty  Easy
+-- Subdomain   Advanced Select
+-- Platform    HackerRank
+-- Language    db2
+-- Status      Accepted
+-- Submitted   2026-09-23, 10:52 p.m.
+-- ──────────────────────────────────────────────────
+
+
+/*
+    Enter your query here and follow these instructions:
+    1. Please append a semicolon ";" at the end of the query and enter your query in a single line to avoid error.
+    2. The AS keyword causes errors, so follow this convention: "Select t.Field From table1 t" instead of "select t.Field From table1 AS t"
+    3. Type yo\ur code immediately after comment. Don't leave any blank line.
+*/
+SELECT CASE 
+WHEN A+B<=c OR A+C<=B OR B+C<=A THEN 'Not A Triangle'
+WHEN A=B AND A=C THEN 'Equilateral'
+WHEN A=B or A=C or B=C THEN 'Isosceles'
+ELSE 'Scalene'
+END
+FROM TRIANGLES;
